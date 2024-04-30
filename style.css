@@ -94,3 +94,42 @@ hr {
 #question{
   font-size: 26px;
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  #question {
+    font-size: 20px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  #timer {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+  
+  #question {
+    font-size: 21px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  #timer {
+    font-size: 18px;
+  }
+}
