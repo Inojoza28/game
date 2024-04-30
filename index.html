@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <h1>Resolva as questões <br> <span id="questionNumber" style="display: none;">0</span> / <span id="totalQuestions" style="display: none;">6</span><br></h1>
+      <hr><br>
+        <button id="startButton" onclick="startGame()">Iniciar Jogo</button>
+        <div id="gameArea" style="display: none;">
+            <div id="questionArea">
+                <div id="question"></div>
+                <div id="options" class="options"></div>
+                <p>
+                    <br>
+                    Nível: <span id="currentLevel" style="font-weight: bold;">Fácil</span><br><br>
+                    Tempo restante: <span id="timer">0</span> segundos
+                </p>
+                <div id="notificationArea"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
