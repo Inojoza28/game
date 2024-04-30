@@ -74,9 +74,9 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-.options button:hover {
+/* .options button:hover {
   background-color: #02c764e3;
-}
+} */
 
 #notificationArea {
   margin-top: 20px;
