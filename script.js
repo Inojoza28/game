@@ -43,6 +43,11 @@ const phases = [
                 options: ["59", "61", "55", "63"], 
                 answer: "55"
             },
+            { 
+                question: " 8 + 7 + 11 - 16 =", 
+                options: ["12", "15", "10", "18"], 
+                answer: "10"
+            },
             // Adicione mais perguntas médias aqui
         ]
     },
@@ -58,6 +63,11 @@ const phases = [
                 question: "20 - 45 ÷ 5 =", 
                 options: ["-5", "8", "5", "11"], 
                 answer: "11"
+            },
+            { 
+                question: "Qual valor de X na equação: <br><br> X + 12 - 6 = 13", 
+                options: ["4", "7", "10", "8"], 
+                answer: "7"
             },
             // Adicione mais perguntas difíceis aqui
         ]
@@ -145,7 +155,8 @@ function displayQuestion() {
     const currentLevelElement = document.getElementById("currentLevel");
 
     // Preencher os elementos com os dados da pergunta
-    questionElement.textContent = currentQuestion.question;
+    questionElement.innerHTML = currentQuestion.question.replace("<br>", "<br>"); // Manter a quebra de linha
+    questionElement.classList.remove("small-text"); // Remover a classe de texto pequeno, se estiver presente
     questionNumberElement.textContent = totalQuestionsAnswered + 1; // Usar o contador global de questões respondidas
     totalQuestionsElement.textContent = getTotalQuestions();
     currentLevelElement.textContent = currentPhase.difficulty;
@@ -192,7 +203,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 // Função para exibir a pontuação final
 function displayScore() {
   const container = document.querySelector('.container');
-  container.innerHTML = "<h1>Pontuação Final</h1><p>Pontuação Máxima: 7 "  + "</p><p>Sua pontuação: " + score + "</p>";
+  container.innerHTML = "<h1>Pontuação Final</h1><p>Pontuação Máxima: 9 "  + "</p><p>Sua pontuação: " + score + "</p>";
 
 
 // Adiciona o elemento SVG à div de pontuação final

@@ -112,12 +112,17 @@ footer p {
   margin: 5px 0;
 }
 
+.small-text {
+  font-size: 8px; /* Tamanho de fonte menor */
+  line-height: 1.3; /* Espaçamento entre linhas menor */
+}
 
 
 @media (max-width: 768px) {
   .container {
     padding: 20px;
     width: 90%;
+    height: auto;
   }
   
   #question {
@@ -138,6 +143,7 @@ footer p {
   .container {
     padding: 20px;
     width: 80%;
+    height: auto;
   }
   
   #question {

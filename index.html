@@ -8,12 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Resolva as questões <br> <span id="questionNumber" style="display: none;">0</span> / <span id="totalQuestions" style="display: none;">7</span><br></h1>
+        <h1>Resolva as questões <br> <span id="questionNumber" style="display: none;">+ -</span> / <span id="totalQuestions" style="display: none;">x</span><br></h1>
         <hr><br>
         <button id="startButton" onclick="startGame()">Iniciar Jogo</button>
         <div id="gameArea" style="display: none;">
             <div id="questionArea">
                 <div id="question"></div>
+                <div id="question" class="small-text"></div>
                 <div id="options" class="options"></div>
                 <p>
                     <br>
@@ -21,6 +22,7 @@
                     Tempo restante: <span id="timer">0</span> segundos
                 </p>
                 <div id="notificationArea"></div>
+                
             </div>
         </div>
         
