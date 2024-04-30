@@ -22,6 +22,11 @@ const phases = [
                 options: ["35", "25", "30", "40"], 
                 answer: "35"
             },
+            { 
+                question: "75 ÷ 5 =", 
+                options: ["25", "15", "30", "20"], 
+                answer: "15"
+            },
             // Adicione mais perguntas fáceis aqui
         ]
     },
@@ -187,7 +192,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 // Função para exibir a pontuação final
 function displayScore() {
   const container = document.querySelector('.container');
-  container.innerHTML = "<h1>Pontuação Final</h1><p>Pontuação Máxima: 6 "  + "</p><p>Sua pontuação: " + score + "</p>";
+  container.innerHTML = "<h1>Pontuação Final</h1><p>Pontuação Máxima: 7 "  + "</p><p>Sua pontuação: " + score + "</p>";
 
 
 // Adiciona o elemento SVG à div de pontuação final

@@ -1,12 +1,16 @@
 body {
   font-family: Arial, sans-serif;
- background-image: url('img/math.jpg');
+  background-image: url('img/plano.jpg');
+  background-color: rgba(255, 255, 255, 0.226); /* Cor branca com 50% de transparência */
+  background-blend-mode: overlay; /* Mistura a cor de fundo com a imagem */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-size: auto 100%; /* Ajusta a largura automaticamente e mantém a altura em 100% */
+  background-position: center top; /* Posiciona a imagem centralizada na parte superior */
 }
 
 
@@ -29,7 +33,7 @@ h1 {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
   text-align: center;
 }
 
@@ -95,10 +99,25 @@ hr {
   font-size: 26px;
 }
 
+/* Estilo para o footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
 
 @media (max-width: 768px) {
   .container {
     padding: 20px;
+    width: 90%;
   }
   
   #question {
@@ -118,6 +137,7 @@ hr {
 @media (max-width: 576px) {
   .container {
     padding: 20px;
+    width: 80%;
   }
   
   #question {
@@ -125,7 +145,7 @@ hr {
   }
   
   button {
-    font-size: 16px;
+    font-size: 18px;
     padding: 8px 12px;
   }
   

@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-      <h1>Resolva as questões <br> <span id="questionNumber" style="display: none;">0</span> / <span id="totalQuestions" style="display: none;">6</span><br></h1>
-      <hr><br>
+        <h1>Resolva as questões <br> <span id="questionNumber" style="display: none;">0</span> / <span id="totalQuestions" style="display: none;">7</span><br></h1>
+        <hr><br>
         <button id="startButton" onclick="startGame()">Iniciar Jogo</button>
         <div id="gameArea" style="display: none;">
             <div id="questionArea">
@@ -22,8 +22,15 @@
                 </p>
                 <div id="notificationArea"></div>
             </div>
-            
         </div>
+        
+        <!-- Footer adicionado como filho do .container -->
+        <footer>
+            <p>Turma:[Nome da turma] </p>
+            <p>Alunos: [Nome dos Alunos]</p>
+            <p>Professor: [Nome do Professor]</p>
+            <p>Feira de Ciências: [Nome da Feira de Ciências]</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
