@@ -205,8 +205,17 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 
 // Função para exibir a pontuação final
 function displayScore() {
-  const container = document.querySelector('.container');
-  container.innerHTML = "<h1>Pontuação Final</h1><p>Pontuação Máxima: 9 "  + "</p><p>Sua pontuação: " + score + "</p>";
+    const container = document.querySelector('.container');
+    container.innerHTML = "<h1>Pontuação Final</h1><p class='score'>Pontuação Máxima: 9 </p><p class='score'>Sua pontuação: <strong>" + score + "</strong></p>";
+  
+    // Adicionando estilo para aumentar o tamanho da pontuação
+    const scoreElements = document.querySelectorAll('.score');
+    scoreElements.forEach(element => {
+      element.style.fontSize = '18px'; // Altere o tamanho conforme desejado
+    });
+  
+  
+  
 
 
 // Adiciona o elemento SVG à div de pontuação final
@@ -259,5 +268,4 @@ function startTimer() {
       }
   }, 1000);
 }
-
 
