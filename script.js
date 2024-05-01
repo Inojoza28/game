@@ -114,6 +114,9 @@ let totalQuestionsAnswered = 0;
 
 // Função para iniciar o jogo
 function startGame() {
+    // Ocultar o footer
+    document.querySelector('footer').style.display = 'none';
+
     // Esconder o botão de iniciar
     document.getElementById("startButton").style.display = "none";
     // Exibir a área do jogo
@@ -218,6 +221,7 @@ svgIcon.innerHTML = `
         <div class="star-eight"></div>
     </div>
 `;
+
 container.appendChild(svgIcon);
 
 }
