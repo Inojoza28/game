@@ -7,6 +7,8 @@ let currentQuestionIndex = 0;
 let currentPhaseIndex = 0;
 let score = 0;
 let timer;
+let totalQuestionsAnswered = 0; // Variável global para contar o número total de questões respondidas
+let playerName = ""; // Variável global para armazenar o nome do jogador
 const timePerQuestion = 10; // Tempo em segundos por pergunta
 const phases = [
     {
@@ -27,6 +29,11 @@ const phases = [
                 options: ["25", "15", "30", "20"], 
                 answer: "15"
             },
+            { 
+                question: "120 ÷ 6 =", 
+                options: ["30", "35", "25", "20"], 
+                answer: "20"
+            },
             // Adicione mais perguntas fáceis aqui
         ]
     },
@@ -42,6 +49,11 @@ const phases = [
                 question: "12 - 7 + 50 =", 
                 options: ["59", "61", "55", "63"], 
                 answer: "55"
+            },
+            { 
+                question: " 54 + 26 - 40 + 12=", 
+                options: ["52", "49", "46", "54"], 
+                answer: "52"
             },
             { 
                 question: " 8 + 7 + 11 - 16 =", 
@@ -68,6 +80,16 @@ const phases = [
                 question: "Qual valor de X na equação: <br><br> X + 12 - 6 = 13", 
                 options: ["4", "7", "10", "8"], 
                 answer: "7"
+            },
+            { 
+                question: "Qual valor de X na equação: <br><br> 5x - 2 = 18 + 3x", 
+                options: ["7", "13", "10", "20"], 
+                answer: "10"
+            },
+            { 
+                question: "Qual valor de X na equação: <br><br> 4x = 16 + 8 ÷ 2", 
+                options: ["5", "8", "10", "12"], 
+                answer: "5"
             },
             // Adicione mais perguntas difíceis aqui
         ]
@@ -109,11 +131,18 @@ function nextQuestion() {
   displayQuestion();
 }
 
-// Variável global para contar o número total de questões respondidas
-let totalQuestionsAnswered = 0;
 
 // Função para iniciar o jogo
 function startGame() {
+    // Capturar o nome digitado pelo usuário
+    playerName = document.getElementById("userNameInput").value;
+
+    // Verificar se o nome foi preenchido
+    if (playerName.trim() === "") {
+        alert("Por favor, insira seu nome para começar o jogo.");
+        return; // Impede que o jogo seja iniciado se o nome estiver vazio
+    }
+
     // Ocultar o footer
     document.querySelector('footer').style.display = 'none';
 
@@ -124,6 +153,7 @@ function startGame() {
     // Exibir a primeira pergunta
     displayQuestion();
 }
+
 
 // Função para exibir a próxima pergunta
 function nextQuestion() {
@@ -206,16 +236,16 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 // Função para exibir a pontuação final
 function displayScore() {
     const container = document.querySelector('.container');
-    container.innerHTML = "<h1>Pontuação Final</h1><p class='score'>Pontuação Máxima: 9 </p><p class='score'>Sua pontuação: <strong>" + score + "</strong></p>";
-  
+    container.innerHTML = "<h1>Parabéns, " + playerName + "!</h1><p class='score'>Pontuação Máxima: 13 </p><p class='score'>Sua pontuação: <strong>" + score + "</strong></p>";
+    if (score < 6) {
+        container.innerHTML = "<h1>Fim de Jogo</h1><p>Mais atenção na próxima vez, " + playerName + "!</p><p>Total de questões: 13 <br> Você acertou <strong>" + score + "</strong> questões.</p>";
+    }
     // Adicionando estilo para aumentar o tamanho da pontuação
     const scoreElements = document.querySelectorAll('.score');
     scoreElements.forEach(element => {
-      element.style.fontSize = '18px'; // Altere o tamanho conforme desejado
+        element.style.fontSize = '18px'; // Altere o tamanho conforme desejado
     });
-  
-  
-  
+
 
 
 // Adiciona o elemento SVG à div de pontuação final
@@ -233,6 +263,13 @@ svgIcon.innerHTML = `
 
 container.appendChild(svgIcon);
 
+// Adiciona o botão de reinício
+const restartButton = document.createElement("button");
+restartButton.textContent = "Reiniciar Jogo";
+restartButton.addEventListener("click", function() {
+    window.location.href = "index.html"; // Redireciona para a página inicial
+});
+container.appendChild(restartButton);
 }
 
 
@@ -243,16 +280,16 @@ function startTimer() {
   // Determina o tempo com base no nível de dificuldade atual
   switch (phases[currentPhaseIndex].difficulty) {
       case "Fácil":
-          timeLeft = 20;
+          timeLeft = 25;
           break;
       case "Médio":
-          timeLeft = 15;
+          timeLeft = 20;
           break;
       case "Difícil":
-          timeLeft = 10;
+          timeLeft = 15;
           break;
       default:
-          timeLeft = 10; // Tempo padrão
+          timeLeft = 15; // Tempo padrão
   }
 
   const timerElement = document.getElementById("timer");
@@ -268,4 +305,3 @@ function startTimer() {
       }
   }, 1000);
 }
-

@@ -1,18 +1,24 @@
 body {
   font-family: Arial, sans-serif;
   background-image: url('img/plano.jpg');
-  background-color: rgba(255, 255, 255, 0.226); /* Cor branca com 50% de transparência */
-  background-blend-mode: overlay; /* Mistura a cor de fundo com a imagem */
+  background-color: rgba(255, 255, 255, 0.226);
+  background-blend-mode: overlay;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-size: auto 100%; /* Ajusta a largura automaticamente e mantém a altura em 100% */
-  background-position: center top; /* Posiciona a imagem centralizada na parte superior */
 }
 
+.navbar-toggler:hover{
+  background-color: rgb(32, 32, 32);
+}
+
+/* Estilos para a caixa de texto do nome do usuário */
+.user-name-container {
+  background-color: #f8f9fa; /* Altere para a cor desejada */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 
 h1 {
@@ -28,7 +34,17 @@ h1 {
 /* CSS existente */
 
 .container {
-  max-width: 900px;
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.521);
+  text-align: center;
+}
+
+.containers {
+  max-width: 400px;
   margin: 50px auto;
   background-color: #fff;
   padding: 30px;
@@ -145,6 +161,11 @@ footer p {
     width: 80%;
     height: auto;
   }
+  .containers {
+    padding: 20px;
+    width: 80%;
+    height: auto;
+  }
   
   #question {
     font-size: 21px;
@@ -159,5 +180,4 @@ footer p {
     font-size: 18px;
   }
 }
-
 
