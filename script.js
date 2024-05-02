@@ -237,7 +237,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 function displayScore() {
     const container = document.querySelector('.container');
     container.innerHTML = "<h1>Parabéns, " + playerName + "!</h1><p class='score'>Pontuação Máxima: 13 </p><p class='score'>Sua pontuação: <strong>" + score + "</strong></p>";
-    if (score < 6) {
+    if (score <= 6) {
         container.innerHTML = "<h1>Fim de Jogo</h1><p>Mais atenção na próxima vez, " + playerName + "!</p><p>Total de questões: 13 <br> Você acertou <strong>" + score + "</strong> questões.</p>";
     }
     // Adicionando estilo para aumentar o tamanho da pontuação
