@@ -13,7 +13,7 @@ body {
 
 /* Estilos para a caixa de texto do nome do usuário */
 .user-name-container {
-  background-color: #f8f9fa; /* Altere para a cor desejada */
+  background-color: #f8f9fa; 
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -31,8 +31,6 @@ h1 {
   font-size: 24px;
 }
 
-
-/* CSS existente */
 
 .container {
   max-width: 700px;
@@ -91,21 +89,17 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-/* .options button:hover {
-  background-color: #02c764e3;
-} */
-
 #notificationArea {
   margin-top: 20px;
 }
 
 hr {
-  border-top: 2px solid #333; /* Cor e espessura da linha */
-  margin: 10px 0; /* Espaçamento em cima e embaixo da linha */
+  border-top: 2px solid #333; 
+  margin: 10px 0; 
 }
 
 #timer {
-  font-size: 24px; /* Tamanho da fonte desejado */
+  font-size: 24px; 
 }
 
 #question{
@@ -126,8 +120,8 @@ footer p {
 }
 
 .small-text {
-  font-size: 8px; /* Tamanho de fonte menor */
-  line-height: 1.3; /* Espaçamento entre linhas menor */
+  font-size: 8px; 
+  line-height: 1.3; 
 }
 
 
